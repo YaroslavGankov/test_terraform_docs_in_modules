@@ -9,8 +9,8 @@ jobs:
   build1:
     name: "TF Docs"
     runs-on: ubuntu-latest
-    env:
-      OLOLO1: ${{ $(date) }}
+    # env:
+    #   OLOLO1: ${{ $(date) }}
     #   CURRENT_DATE: ${{ echo $(date) }}
     #   AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
     # defaults:
@@ -48,6 +48,4 @@ jobs:
           echo ${{ steps.render_docs.with.working-dir }}
           echo ${{ steps.render_docs.working-dir }}
           echo ${{ steps.render_docs.env.working-dir }}
-          echo $OLOLO1
-          echo ${{ env.OLOLO1 }}
         continue-on-error: true
