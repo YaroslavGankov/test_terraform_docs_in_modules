@@ -10,6 +10,7 @@ jobs:
     name: "TF Docs"
     runs-on: ubuntu-latest
     # env:
+    #   CURRENT_DATE: ${{ echo $(date) }}
     #   AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
     # defaults:
     #   run:
@@ -31,3 +32,4 @@ jobs:
           config-file: .terraform-docs.yml
           output-method: inject
           output-file: readme.md
+          #git-commit-message: "terraform-docs: automated action"
