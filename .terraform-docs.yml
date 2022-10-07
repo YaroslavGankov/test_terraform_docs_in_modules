@@ -6,7 +6,7 @@ header-from: main.tf
 footer-from: "notes.md"
 
 recursive:
-  enabled: true
+  enabled: false
   #path добавляется к working-dir из terraform-docs/gh-actions.
   path: .
 

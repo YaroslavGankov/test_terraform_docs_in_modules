@@ -27,8 +27,8 @@ jobs:
         uses: terraform-docs/gh-actions@main
         with:
           git-push: true #"true" with double quotes works. true without quotes also works
-          #working-dir: workspaces
-          find-dir: layer2.SG,layer1.Network #find-dir - Name of root directory to extract list of directories by running find ./find\_dir -name \*.tf (ignored if atlantis-file is set)
+          working-dir: .,layer2.SG
+          #find-dir: workspaces #find-dir - Name of root directory to extract list of directories by running find ./find\_dir -name \*.tf (ignored if atlantis-file is set)
           config-file: .terraform-docs.yml
           output-method: inject
           output-file: readme.md
