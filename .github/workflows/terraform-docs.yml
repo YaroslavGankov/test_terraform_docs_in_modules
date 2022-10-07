@@ -32,4 +32,4 @@ jobs:
           config-file: .terraform-docs.yml
           output-method: inject
           output-file: readme.md
-          git-commit-message: "docs ${{ echo $(date) }}: automated updated terraform-docs"
+          git-commit-message: "docs ${{ \"echo $(date)\" }}: automated updated terraform-docs"
