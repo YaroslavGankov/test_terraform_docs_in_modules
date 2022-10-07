@@ -9,7 +9,8 @@ jobs:
   build1:
     name: "TF Docs"
     runs-on: ubuntu-latest
-    # env:
+    env:
+      OLOLO1: ${{ echo $(date) }}
     #   CURRENT_DATE: ${{ echo $(date) }}
     #   AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
     # defaults:
@@ -33,11 +34,13 @@ jobs:
           config-file: .terraform-docs.yml
           output-method: inject
           output-file: readme.md
-          git-commit-message: "docs ${{ steps.render_docs.with.working-dir }}: automated update terraform-docs"
+          git-commit-message: "docs ${{ env.OLOLO1 }}: automated update terraform-docs"
       
       - name: debug
         run: |
           echo ${{ steps.render_docs.with.working-dir }}
           echo ${{ steps.render_docs.working-dir }}
           echo ${{ steps.render_docs.env.working-dir }}
+          echo $OLOLO1
+          echo ${{ env.OLOLO1 }}
         continue-on-error: true
