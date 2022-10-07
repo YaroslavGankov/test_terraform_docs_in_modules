@@ -5,11 +5,11 @@ version: ""
 header-from: main.tf
 footer-from: ""
 
-recursive:
-  enabled: false
-  path: |-
-    layer1.Network
-    .
+# recursive:
+#   enabled: false
+#   path: |-
+#     layer1.Network
+#     .
 
 sections:
   hide: []
