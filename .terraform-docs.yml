@@ -1,6 +1,6 @@
 formatter: "markdown" # this is required
 
-version: ""
+# version: ""
 
 header-from: main.tf
 footer-from: "notes.md"
@@ -10,27 +10,26 @@ recursive:
   #path добавляется к working-dir из terraform-docs/gh-actions.
   path: .
 
-sections:
-  hide: []
-  show: []
+# sections:
+#   hide: []
+#   show: []
 
-content: ""
+# content: ""
 
 output:
-  file: ""
   mode: inject
   template: |-
     <!-- BEGIN_TF_DOCS -->
     {{ .Content }}
     <!-- END_TF_DOCS -->
 
-output-values:
-  enabled: false
-  from: ""
+# output-values:
+#   enabled: false
+#   from: ""
 
 sort:
   enabled: true
-  by: name
+  by: required
 
 settings:
   anchor: true

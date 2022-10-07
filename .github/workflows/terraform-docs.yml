@@ -33,7 +33,7 @@ jobs:
           config-file: .terraform-docs.yml
           output-method: inject
           output-file: readme.md
-          git-commit-message: "docs ${{ steps.render_docs.with.working-dir }}: automated updated terraform-docs"
+          git-commit-message: "docs ${{ steps.render_docs.with.working-dir }}: automated update terraform-docs"
       
       - name: debug
         run: |
