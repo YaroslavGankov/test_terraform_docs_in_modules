@@ -34,3 +34,10 @@ jobs:
           output-method: inject
           output-file: readme.md
           git-commit-message: "docs ${{ steps.render_docs.with.working-dir }}: automated updated terraform-docs"
+      
+      - name: debug
+        run: |
+          echo ${{ steps.render_docs.with.working-dir }}
+          echo ${{ steps.render_docs.working-dir }}
+          echo ${{ steps.render_docs.env.working-dir }}
+        continue-on-error: true
