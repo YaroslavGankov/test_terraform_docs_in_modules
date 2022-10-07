@@ -8,7 +8,7 @@ footer-from: "notes.md"
 recursive:
   enabled: true
   #path добавляется к working-dir из terraform-docs/gh-actions.
-  path: 
+  path: workspaces
 
 sections:
   hide: []
