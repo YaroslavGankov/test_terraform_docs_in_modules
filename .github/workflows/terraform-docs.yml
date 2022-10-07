@@ -26,7 +26,8 @@ jobs:
         uses: terraform-docs/gh-actions@main
         with:
           git-push: true #"true" with double quotes works. true without quotes also works
-          working-dir: workspaces
+          #working-dir: workspaces
+          find-dir: workspaces
           config-file: .terraform-docs.yml
           output-method: inject
           output-file: readme.md
