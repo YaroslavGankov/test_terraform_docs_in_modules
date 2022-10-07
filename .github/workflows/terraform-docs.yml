@@ -1,0 +1,31 @@
+#
+name: Terraform_Docs_testing
+on:
+  workflow_dispatch:
+  # push:
+  #   branches: [ master, main ]
+  pull_request:
+    branches: [ master, main ]
+  
+jobs:
+  build1:
+    name: "TF Docs"
+    runs-on: ubuntu-latest
+    env:
+      AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
+    # defaults:
+    #   run:
+    #     working-directory: ${{ env.WORKING_DIRECTORY }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      
+      - name: Render terraform docs and push changes back to PR
+        uses: terraform-docs/gh-actions@main
+        with:
+          git-push: true
+          working-dir: .
+          config-file: .terraform-docs.yml
+          output-method: inject
+          output-file: readme.md
