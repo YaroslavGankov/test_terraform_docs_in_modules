@@ -41,7 +41,7 @@ jobs:
           config-file: .terraform-docs.yml
           output-method: inject
           output-file: readme.md
-          git-commit-message: "docs ${{ steps.current_time.outputs.Time }}: automated update terraform-docs"
+          git-commit-message: "docs: automated update terraform-docs (${{ steps.current_time.outputs.Time }})"
       
       - name: debug
         run: |
