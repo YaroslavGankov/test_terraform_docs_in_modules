@@ -24,6 +24,7 @@ jobs:
           ref: ${{ github.event.pull_request.head.ref }}
       
       - name: Render terraform docs and push changes back to PR
+        id: render_docs
         uses: terraform-docs/gh-actions@main
         with:
           git-push: true #"true" with double quotes works. true without quotes also works
@@ -32,4 +33,4 @@ jobs:
           config-file: .terraform-docs.yml
           output-method: inject
           output-file: readme.md
-          git-commit-message: "docs ${{ \"echo $(date)\" }}: automated updated terraform-docs"
+          git-commit-message: "docs ${{ render_docs.with.working-dir }}: automated updated terraform-docs"
