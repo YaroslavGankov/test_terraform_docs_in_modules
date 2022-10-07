@@ -3,10 +3,10 @@ formatter: "markdown" # this is required
 version: ""
 
 header-from: main.tf
-footer-from: ""
+footer-from: "notes.md"
 
 recursive:
-  enabled: true
+  enabled: false
   #path добавляется к working-dir из terraform-docs/gh-actions.
   path: .
 
