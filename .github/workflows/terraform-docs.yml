@@ -10,7 +10,7 @@ jobs:
     name: "TF Docs"
     runs-on: ubuntu-latest
     env:
-      OLOLO1: ${{ echo $(date) }}
+      OLOLO1: ${{ $(date) }}
     #   CURRENT_DATE: ${{ echo $(date) }}
     #   AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
     # defaults:
