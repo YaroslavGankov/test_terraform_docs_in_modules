@@ -6,12 +6,12 @@ on:
     branches:
       - main
     paths:
-      - layer1.Network/network.tf
+      - 'layer1.Network/network.tf'
   pull_request:
     branches:
       - main
     paths:
-      - layer1.Network/network.tf
+      - 'layer1.Network/network.tf'
 #      - '!**.yml'
  
 jobs:
