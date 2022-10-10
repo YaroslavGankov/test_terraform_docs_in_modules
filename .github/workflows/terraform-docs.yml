@@ -6,7 +6,7 @@ on:
       - 'workspaces/**'
 #      - '!workspaces/**.md'
 #    branches: [ master, main ]
-  workflow_dispatch:
+  #workflow_dispatch:
   
 jobs:
   build1:
