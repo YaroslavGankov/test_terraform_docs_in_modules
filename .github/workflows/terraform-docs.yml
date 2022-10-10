@@ -10,7 +10,7 @@ on:
     # branches:
     #   - main
     paths:
-      - 'layer1.Network/**'
+      - 'layer1.Network/network.tf'
 #      - '!**.yml'
  
 jobs:
