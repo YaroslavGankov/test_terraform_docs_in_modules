@@ -1,21 +1,27 @@
-#
+####
 name: Terraform_Docs_testing
+
 on:
-  push:
-    #branches: [ master, main ]
-    paths-ignore:
-      - '**.yml'
-      - '**.md'
-  # pull_request:
-  #   branches: [ master, main ]
-  workflow_dispatch:
-  
+  # push:
+  #   branches:
+  #     - main
+  #   paths:
+  #     - layer1.Network/network.tf
+  pull_request:
+    branches:
+      - layer
+    paths:
+      - layer1.Network/network.tf
+#      - '!**.yml'
+ 
 jobs:
   build1:
     name: "TF Docs"
     runs-on: ubuntu-latest
-    env:
-      AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
+    # env:
+    #   OLOLO1: ${{ $(date) }}
+    #   CURRENT_DATE: ${{ echo $(date) }}
+    #   AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
     # defaults:
     #   run:
     #     working-directory: ${{ env.WORKING_DIRECTORY }}
@@ -23,12 +29,32 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      
-      - name: Render terraform docs and push changes back to PR
-        uses: terraform-docs/gh-actions@main
+        #следующую ref обязательно писать, иначе terraform-docs/gh-actions@main не поймёт, куда нужно постить ответ
         with:
-          git-push: true
-          working-dir: .
-          config-file: .terraform-docs.yml
-          output-method: inject
-          output-file: readme.md
+          ref: ${{ github.event.pull_request.head.ref }}
+      
+      - name: Get current time
+        uses: josStorer/get-current-time@v2.0.1
+        id: current_time
+        with:
+          format: YYYYMMDD-HH-MM
+          utcOffset: "+06:00"
+
+      # - name: Render terraform docs and push changes back to PR
+      #   id: render_docs
+      #   uses: terraform-docs/gh-actions@main
+      #   with:
+      #     git-push: true #"true" with double quotes works. true without quotes also works
+      #     #working-dir: .,layer2.SG
+      #     find-dir: workspaces #find-dir - Name of root directory to extract list of directories by running find ./find\_dir -name \*.tf (ignored if atlantis-file is set)
+      #     config-file: .terraform-docs.yml
+      #     output-method: inject
+      #     output-file: readme.md
+      #     git-commit-message: "docs: automated update terraform-docs (${{ steps.current_time.outputs.Time }})"
+      
+      - name: debug
+        run: |
+          echo ${{ steps.render_docs.with.working-dir }}
+          echo ${{ steps.render_docs.working-dir }}
+          echo ${{ steps.render_docs.env.working-dir }}
+        continue-on-error: true

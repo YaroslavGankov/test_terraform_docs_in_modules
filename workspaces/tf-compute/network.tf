@@ -1,4 +1,3 @@
-#for tests111222
 # #directive for remote-state-file storage for terraform (for non-module structure)
 # terraform {
 #   backend "s3" {
