@@ -1,12 +1,9 @@
 ####
 name: Terraform_Docs_testing
 on:
-  # push:
-  #   branches: [ master, main ]
   pull_request:
     paths:
-#      - '**/*.md'
-      - 'workspaces/tf-compute/notes.md'
+      - 'workspaces/**'
 #    branches: [ master, main ]
   #workflow_dispatch:
   
