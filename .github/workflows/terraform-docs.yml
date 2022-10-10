@@ -2,6 +2,7 @@
 name: Terraform_Docs_testing
 on:
   push:
+    branches: [ master, main ]
     paths-ignore:
       - '**.md'
     #branches: [ master, main ]
