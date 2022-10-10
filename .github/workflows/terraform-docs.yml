@@ -3,8 +3,8 @@ name: Terraform_Docs_testing
 on:
   pull_request:
     paths:
-      #- 'workspaces/**'
-      - '!workspaces/**/*.md'
+      - 'workspaces/**'
+#      - '!**.md'
 #    branches: [ master, main ]
   workflow_dispatch:
   
