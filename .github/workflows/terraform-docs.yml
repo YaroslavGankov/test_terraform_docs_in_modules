@@ -1,10 +1,10 @@
 #
 name: Terraform_Docs_testing
 on:
-  pull_request: 
+  pull_request:
     paths:
       - 'workspaces/**'
-      - '!workspaces/**.md'
+      - '!workspaces/**/notes.md'
 #    branches: [ master, main ]
   workflow_dispatch:
   
