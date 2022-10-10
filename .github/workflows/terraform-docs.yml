@@ -6,7 +6,8 @@ on:
   pull_request:
     branches: [ master, main ]
     paths-ignore:
-      - '**/*.md'
+#      - '**/*.md'
+      - "workspaces/tf-compute/notes.md"
 #    branches: [ master, main ]
   #workflow_dispatch:
   
