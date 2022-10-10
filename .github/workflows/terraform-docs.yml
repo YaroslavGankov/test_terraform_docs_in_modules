@@ -8,9 +8,9 @@ on:
       - '**/*.md'
   pull_request:
     branches:
-      - relea*
-    # paths:
-    #   - '**/*.md'
+      - main
+    paths:
+      - 'workspaces/**'
  
 jobs:
   build1:
