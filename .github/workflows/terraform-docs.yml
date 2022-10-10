@@ -10,7 +10,7 @@ on:
   pull_request:
     branches:
       - main
-    paths:
+    paths-ignore:
       - 'layer1.Network/network.tf'
 #      - '!**.yml'
  
