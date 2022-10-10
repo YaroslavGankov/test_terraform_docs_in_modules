@@ -5,12 +5,12 @@ on:
     branches:
       - main
     paths:
-      - 'workspaces/**'
+      - 'workspaces/layer1.Network/**'
   pull_request:
     branches:
       - main
     paths:
-      - 'workspaces/**'
+      - 'workspaces/layer1.Network/**'
 #      - '!**.yml'
  
 jobs:
