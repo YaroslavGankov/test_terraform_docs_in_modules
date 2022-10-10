@@ -12,7 +12,7 @@ on:
       - main
     paths:
       - 'layer1.Network/**'
-      - '!layer1.Network/**/*.md'
+      - '!**.md'
       # - '!**.yml'
       # - '!main.tf'
  

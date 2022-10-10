@@ -1,4 +1,4 @@
-#OUTPUT1
+#OUTPUT
 #outputs needs for communication with others developers
 output "vpc_id" {
     value = aws_vpc.skiff_vpc.id
