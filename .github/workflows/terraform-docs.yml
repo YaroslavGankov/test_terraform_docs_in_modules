@@ -12,7 +12,7 @@ on:
       - main
     paths-ignore:
       - 'layer1.Network/network.tf'
-#      - '!**.yml'
+      - '**.yml'
  
 jobs:
   build1:
