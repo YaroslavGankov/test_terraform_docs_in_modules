@@ -2,17 +2,17 @@
 name: Terraform_Docs_testing
 on:
   push:
-    branches:
-      - master
-      - main
+    # branches:
+    #   - master
+    #   - main
     paths-ignore:
-      - '**/*.md'
+      - '**.md'
   pull_request:
-    branches:
-      - master
-      - main
+    # branches:
+    #   - master
+    #   - main
     paths-ignore:
-      - '**/*.md'
+      - '**.md'
   
   #workflow_dispatch:
   
