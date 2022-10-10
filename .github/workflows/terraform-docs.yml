@@ -11,7 +11,7 @@ on:
     branches:
       - main
     paths-ignore:
-      - 'layer1.Network/network.tf'
+      - 'layer1.Network/**'
       - '**.yml'
  
 jobs:
