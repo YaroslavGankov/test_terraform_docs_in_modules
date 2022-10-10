@@ -5,12 +5,13 @@ on:
     branches:
       - main
     paths:
-      - '**/*.md'
+      - 'workspaces/**'
   pull_request:
     branches:
       - main
     paths:
-      - workspaces/**
+      - 'workspaces/**'
+#      - '!**.yml'
  
 jobs:
   build1:
