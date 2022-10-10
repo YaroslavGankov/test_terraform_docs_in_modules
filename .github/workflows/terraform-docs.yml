@@ -9,7 +9,7 @@ on:
   #     - layer1.Network/network.tf
   pull_request:
     branches:
-      - layer
+      - main
     paths:
       - layer1.Network/network.tf
 #      - '!**.yml'
