@@ -9,8 +9,8 @@ on:
   pull_request:
     branches:
       - relea*
-    paths:
-      - '**/*.md'
+    # paths:
+    #   - '**/*.md'
  
 jobs:
   build1:
