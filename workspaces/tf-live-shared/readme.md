@@ -1,5 +1,5 @@
 <!-- BEGIN_TF_DOCS -->
-shared skiff
+shared skiff2
 some changes in notes.md file
 
 ## Requirements
