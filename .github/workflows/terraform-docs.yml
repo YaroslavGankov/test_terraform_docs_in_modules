@@ -31,7 +31,7 @@ jobs:
         id: current_time
         with:
           format: YYYYMMDD-HH-MM
-          utcOffset: "+03:00"
+          utcOffset: "+06:00"
 
       - name: Render terraform docs and push changes back to PR
         id: render_docs
