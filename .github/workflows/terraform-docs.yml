@@ -1,9 +1,11 @@
 #
 name: Terraform_Docs_testing
 on:
-  - pull_request
+  pull_request: 
+    paths:
+      - '!**.md'
 #    branches: [ master, main ]
-  - workflow_dispatch
+  workflow_dispatch:
   
 jobs:
   build1:
