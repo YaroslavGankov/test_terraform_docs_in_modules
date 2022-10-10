@@ -1,5 +1,5 @@
 <!-- BEGIN_TF_DOCS -->
-compute skiff
+compute skiff2
 
 ## Requirements
 
