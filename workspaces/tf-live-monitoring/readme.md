@@ -1,5 +1,5 @@
 <!-- BEGIN_TF_DOCS -->
-moniroting skiff
+moniroting skiff2
 
 ## Requirements
 
