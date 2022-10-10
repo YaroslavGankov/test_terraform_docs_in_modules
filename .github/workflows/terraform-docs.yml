@@ -10,10 +10,11 @@ on:
   pull_request:
     branches:
       - main
-    paths-ignore:
+    paths:
       - 'layer1.Network/**'
-      - '**.yml'
-      - 'main.tf'
+      - '!layer1.Network/**/*.md'
+      # - '!**.yml'
+      # - '!main.tf'
  
 jobs:
   build1:
