@@ -1,11 +1,12 @@
 ####
 name: Terraform_Docs_testing
+
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - layer1.Network/network.tf
+  # push:
+  #   branches:
+  #     - main
+  #   paths:
+  #     - layer1.Network/network.tf
   pull_request:
     paths:
       - layer1.Network/network.tf
