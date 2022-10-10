@@ -6,11 +6,11 @@ on:
       - main
     paths:
       - '**/*.md'
-  # pull_request:
+  pull_request:
   #   branches:
   #     - main
-  #   paths:
-  #     - '**/*.md'
+    paths:
+      - '**/*.md'
  
 jobs:
   build1:
