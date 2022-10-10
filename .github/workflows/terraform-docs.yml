@@ -2,9 +2,9 @@
 name: Terraform_Docs_testing
 on:
   push:
-    # branches:
-    #   - master
-    #   - main
+    branches:
+      - master
+      - main
     paths-ignore:
       - '**.md'
   pull_request:
