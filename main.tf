@@ -1,4 +1,4 @@
-######
+#########
 #--------VARIABLES
 variable "temp_vpc_cidr_mask16" {
   description = "First two numbers of the VPC (without dot in the end). Example: '10.178'"
