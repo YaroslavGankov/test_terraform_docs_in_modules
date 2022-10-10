@@ -7,7 +7,7 @@ on:
     branches: [ master, main ]
     paths-ignore:
 #      - '**/*.md'
-      - "workspaces/tf-compute/notes.md"
+      - 'workspaces/tf-compute/notes.md'
 #    branches: [ master, main ]
   #workflow_dispatch:
   
